@@ -1,0 +1,13 @@
+.error {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    padding: 2em;
+    gap: 1em;
+    height: 100%;
+}
+
+.error h2 {
+    place-self: start;
+    font-weight: 600;
+}

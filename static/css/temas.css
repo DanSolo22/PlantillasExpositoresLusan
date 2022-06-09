@@ -1,0 +1,265 @@
+:root {
+    --tema1-primaryColor: #26a69a;
+    --tema1-primaryLightColor: #64d8cb;
+    --tema1-primaryLightColorOpacity: rgba(100, 216, 203, 0.3);
+    --tema1-primaryDarkColor: #00766c;
+    --tema1-secondaryColor: #f06292;
+    --tema1-secondaryLightColor: #ff94c2;
+    --tema1-secondaryLightColorOpacity: rgba(255, 148, 194, 0.4);
+    --tema1-secondaryDarkColor: #ba2d65;
+
+    --tema2-primaryColor: #9e9d24;
+    --tema2-primaryLightColor: #d2ce56;
+    --tema2-primaryLightColorOpacity: rgba(210, 206, 86, 0.3);
+    --tema2-primaryDarkColor: #6c6f00;
+    --tema2-secondaryColor: #9575cd;
+    --tema2-secondaryLightColor: #c7a4ff;
+    --tema2-secondaryLightColorOpacity: rgba(199, 164, 255, 0.4);
+    --tema2-secondaryDarkColor: #7e5cbe;
+
+    --tema3-primaryColor: #008e5e;
+    --tema3-primaryLightColor: #4dbf8b;
+    --tema3-primaryLightColorOpacity: rgba(77, 191, 139, 0.3);
+    --tema3-primaryDarkColor: #005f34;
+    --tema3-secondaryColor: #618de8;
+    --tema3-secondaryLightColor: #8fb2ff;
+    --tema3-secondaryLightColorOpacity: rgba(143, 178, 255, 0.4);
+    --tema3-secondaryDarkColor: #236ccc;
+
+    --tema4-primaryColor: #cc533c;
+    --tema4-primaryLightColor: #ff8367;
+    --tema4-primaryLightColorOpacity: rgba(255, 131, 103, 0.3);
+    --tema4-primaryDarkColor: #af2817;
+    --tema4-secondaryColor: #009d8c;
+    --tema4-secondaryLightColor: #4dbaa7;
+    --tema4-secondaryLightColorOpacity: rgba(77, 186, 167, 0.4);
+    --tema4-secondaryDarkColor: #008d74;
+}
+
+.temas form {
+    width: calc(100% - 4em);
+    display: flex;
+    place-items: center;
+    place-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 2em;
+}
+
+.temas form div {
+    flex-basis: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.temas button {
+    color: var(--textPrimaryColor);
+    background: var(--background);
+    text-transform: uppercase;
+    padding: 0.8em 1.2em;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 2em;
+    font-weight: 700;
+    transition: all ease-in-out 0.2s;
+}
+
+.temas button:hover, .temas button:active {
+    background: var(--secondaryColor);
+    box-shadow: var(--shadowSH);
+}
+
+.card.tema .material-symbols-rounded.toselect {
+    background: var(--background);
+    border: 1px solid var(--textPrimaryColor);
+    border-radius: 50%;
+    padding: 0.25em;
+    transition: all ease-in-out 0.3s;
+}
+
+.card.tema .material-symbols-rounded.toselect:hover {
+    background: var(--secondaryLightColorOpacity);
+}
+
+.card.tema .material-symbols-rounded.toselect.selected {
+    background: var(--secondaryLightColorOpacity);
+}
+
+.card.tema {
+    margin: 0;
+    min-width: max-content;
+    flex-direction: row;
+    place-content: center;
+    place-items: start center;
+    cursor: pointer;
+    gap: 1em;
+    padding: 1em;
+}
+
+.card.tema .muestra {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 0.5em;
+}
+
+.card.tema .muestra .primary,
+.card.tema .muestra .secondary {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    gap: 0.5em;
+}
+
+.card.tema .muestra .primary {
+    align-items: end;
+}
+
+.card.tema .muestra .secondary {
+    align-items: start;
+}
+
+.card.tema .muestra .primary div,
+.card.tema .muestra .secondary div {
+    border-radius: 0.5em;
+    width: 2em;
+    height: 3em;
+}
+
+.card.tema .muestra .secondary div {
+    height: 2em;
+}
+
+.card.tema.tema1 .muestra .primary div:nth-child(1) {
+    background: var(--tema1-primaryLightColorOpacity);
+}
+
+.card.tema.tema1 .muestra .primary div:nth-child(2) {
+    background: var(--tema1-primaryLightColor);
+}
+
+.card.tema.tema1 .muestra .primary div:nth-child(3) {
+    background: var(--tema1-primaryColor);
+}
+
+.card.tema.tema1 .muestra .primary div:nth-child(4) {
+    background: var(--tema1-primaryDarkColor);
+}
+
+.card.tema.tema1 .muestra .secondary div:nth-child(4) {
+    background: var(--tema1-secondaryLightColorOpacity);
+}
+
+.card.tema.tema1 .muestra .secondary div:nth-child(3) {
+    background: var(--tema1-secondaryLightColor);
+}
+
+.card.tema.tema1 .muestra .secondary div:nth-child(2) {
+    background: var(--tema1-secondaryColor);
+}
+
+.card.tema.tema1 .muestra .secondary div:nth-child(1) {
+    background: var(--tema1-secondaryDarkColor);
+}
+
+.card.tema.tema2 .muestra .primary div:nth-child(1) {
+    background: var(--tema2-primaryLightColorOpacity);
+}
+
+.card.tema.tema2 .muestra .primary div:nth-child(2) {
+    background: var(--tema2-primaryLightColor);
+}
+
+.card.tema.tema2 .muestra .primary div:nth-child(3) {
+    background: var(--tema2-primaryColor);
+}
+
+.card.tema.tema2 .muestra .primary div:nth-child(4) {
+    background: var(--tema2-primaryDarkColor);
+}
+
+.card.tema.tema2 .muestra .secondary div:nth-child(4) {
+    background: var(--tema2-secondaryLightColorOpacity);
+}
+
+.card.tema.tema2 .muestra .secondary div:nth-child(3) {
+    background: var(--tema2-secondaryLightColor);
+}
+
+.card.tema.tema2 .muestra .secondary div:nth-child(2) {
+    background: var(--tema2-secondaryColor);
+}
+
+.card.tema.tema2 .muestra .secondary div:nth-child(1) {
+    background: var(--tema2-secondaryDarkColor);
+}
+
+.card.tema.tema3 .muestra .primary div:nth-child(1) {
+    background: var(--tema3-primaryLightColorOpacity);
+}
+
+.card.tema.tema3 .muestra .primary div:nth-child(2) {
+    background: var(--tema3-primaryLightColor);
+}
+
+.card.tema.tema3 .muestra .primary div:nth-child(3) {
+    background: var(--tema3-primaryColor);
+}
+
+.card.tema.tema3 .muestra .primary div:nth-child(4) {
+    background: var(--tema3-primaryDarkColor);
+}
+
+.card.tema.tema3 .muestra .secondary div:nth-child(4) {
+    background: var(--tema3-secondaryLightColorOpacity);
+}
+
+.card.tema.tema3 .muestra .secondary div:nth-child(3) {
+    background: var(--tema3-secondaryLightColor);
+}
+
+.card.tema.tema3 .muestra .secondary div:nth-child(2) {
+    background: var(--tema3-secondaryColor);
+}
+
+.card.tema.tema3 .muestra .secondary div:nth-child(1) {
+    background: var(--tema3-secondaryDarkColor);
+}
+
+.card.tema.tema4 .muestra .primary div:nth-child(1) {
+    background: var(--tema4-primaryLightColorOpacity);
+}
+
+.card.tema.tema4 .muestra .primary div:nth-child(2) {
+    background: var(--tema4-primaryLightColor);
+}
+
+.card.tema.tema4 .muestra .primary div:nth-child(3) {
+    background: var(--tema4-primaryColor);
+}
+
+.card.tema.tema4 .muestra .primary div:nth-child(4) {
+    background: var(--tema4-primaryDarkColor);
+}
+
+.card.tema.tema4 .muestra .secondary div:nth-child(4) {
+    background: var(--tema4-secondaryLightColorOpacity);
+}
+
+.card.tema.tema4 .muestra .secondary div:nth-child(3) {
+    background: var(--tema4-secondaryLightColor);
+}
+
+.card.tema.tema4 .muestra .secondary div:nth-child(2) {
+    background: var(--tema4-secondaryColor);
+}
+
+.card.tema.tema4 .muestra .secondary div:nth-child(1) {
+    background: var(--tema4-secondaryDarkColor);
+}
+
+@media only screen and (max-width: 820px) {
+    .temas form {
+        grid-template-columns: 1fr;
+    }
+}

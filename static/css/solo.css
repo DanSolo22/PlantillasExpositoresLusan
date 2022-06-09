@@ -1,0 +1,13 @@
+.card.comentarios .comentario button {
+    background: none;
+    border: none;
+}
+
+.card.reseña .buttons button:hover .material-symbols-rounded.delete,
+.card.reseña .buttons button:active .material-symbols-rounded.delete,
+.card.comentarios .comentario button:hover .material-symbols-rounded.delete,
+.card.comentarios .comentario button:active .material-symbols-rounded.delete,
+.card.lista .buttons button:hover .material-symbols-rounded.delete,
+.card.lista .buttons button:active .material-symbols-rounded.delete {
+    color: var(--errorColor);
+}

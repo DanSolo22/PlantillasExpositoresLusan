@@ -1,0 +1,155 @@
+.ficha {
+    width: calc(100% - 4em);
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ficha .head {
+    display: flex;
+    gap: 3em;
+}
+
+.ficha .head img {
+    width: 200px;
+    place-self: start;
+}
+
+.ficha .head .texto {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    place-content: center;
+    gap: 0.75em;
+}
+
+.ficha .head .texto h4 {
+    color: var(--textSecondaryColor);
+    font-weight: 500;
+}
+
+.ficha .head .texto div {
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.5em;
+    place-items: center start;
+}
+
+.ficha .head .texto div span {
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    padding: 0.25em 0.5em;
+    font-size: x-small;
+    border: 1px solid var(--secondaryLightColorOpacity);
+}
+
+.ficha .head .texto div span:nth-child(odd) {
+    display: flex;
+    padding-right: 0.75em;
+    padding-left: 0.75em;
+    place-items: center;
+    border: none;
+    font-size: xx-small;
+    background: var(--secondaryLightColorOpacity);
+}
+
+.ficha .footer .buttons {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.ficha .footer .buttons button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    gap: 0.25em;
+    place-items: center;
+}
+
+.ficha .footer .buttons button:hover,
+.ficha .footer .buttons button:active,
+.ficha .footer .buttons button:hover span,
+.ficha .footer .buttons button:active span {
+    color: var(--secondaryDarkColor);
+}
+
+.ficha form {
+    margin: 1em;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 1em;
+}
+
+.ficha form label {
+    display: none;
+}
+
+.ficha form textarea {
+    width: 100%;
+    resize: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--secondaryColor);
+    background: var(--background);
+}
+
+.ficha form select {
+    min-width: max-content;
+    width: 20%;
+    border: 1px solid var(--extraColor);
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    background: var(--background);
+}
+
+.ficha form button {
+    color: var(--textPrimaryColor);
+    background: var(--background);
+    text-transform: uppercase;
+    padding: 0.8em 1.2em;
+    border: 2px solid var(--secondaryLightColor);
+    border-radius: 2em;
+    place-self: center;
+    font-weight: 700;
+    transition: all ease-in-out 0.2s;
+}
+
+.ficha form button:hover,
+.ficha form button:active {
+    background: var(--secondaryLightColor);
+    box-shadow: var(--shadowSH);
+}
+
+html.dark-mode .ficha form button {
+    border: 2px solid var(--secondaryColor);
+}
+
+html.dark-mode .ficha form button:hover,
+html.dark-mode .ficha form button:active {
+    background: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 700px) {
+    .ficha {
+        width: calc(100% - 2em);
+        margin: 1em;
+        gap: 1em;
+    }
+
+    .ficha .head {
+        gap: 1em;
+    }
+
+    .ficha .head img {
+        width: 120px;
+    }
+}

@@ -1,0 +1,153 @@
+
+.card form {
+    display: grid;
+    place-items: center;
+}
+
+.card form p {
+    display: grid;
+    place-content: space-between;
+    align-items: center;
+    width: calc(100% - 1px);
+    grid-template-columns: calc(40% - 1em) 60%;
+    gap: 1em;
+}
+
+.card form p span {
+    grid-column: span 2;
+}
+
+.card form p span, form ul {
+    font-size: small;
+    max-width: fit-content;
+    color: var(--textSecondaryColor);
+}
+
+.card form ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card form ul.errorlist {
+    color: var(--errorColor);
+}
+
+.card form label {
+    width: fit-content;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.card form select {
+    border: 1px solid var(--extraColor);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background: var(--background);
+}
+
+.card form input {
+    border: 1px solid var(--extraColor);
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    width: 100%;
+    background: var(--background);
+}
+
+.card form button {
+    color: var(--textPrimaryColor);
+    border: 2px solid var(--primaryLightColor);
+    background: var(--background);
+    text-transform: uppercase;
+    padding: 0.8em 1.2em;
+    border-radius: 2em;
+    place-self: center;
+    margin-top: 1em;
+    font-weight: 700;
+    transition: all ease-in-out 0.2s;
+}
+
+.card form button.delete {
+    background: var(--errorColor);
+}
+
+.card form button:hover, form button:active {
+    box-shadow: var(--shadowSH);
+    background: var(--primaryLightColor);
+}
+
+.card table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: smaller;
+}
+
+.card table td, th {
+    border: 1px solid var(--primaryLightColorOpacity);
+    text-align: left;
+    padding: 0.25em 1em;
+}
+
+.card table tr:nth-child(even) {
+    background-color: var(--primaryLightColorOpacity);
+}
+
+.card table td:nth-child(3) {
+    text-align: center;
+}
+
+.card table button.borrar {
+    background: none;
+    border: 2px solid var(--errorColor);
+    font-weight: bold;
+    color: var(--errorColor);
+    border-radius: 1em;
+    padding: 0.25em 0.5em;
+    font-size: x-small;
+    transition: all ease-in-out 0.1s;
+}
+
+.card table button.borrar:hover,
+.card table button.borrar:active {
+    background: var(--errorColor);
+    color: white;
+}
+
+.card.editar form p:nth-child(2) {
+    gap: 0.5em;
+    grid-template-columns: calc(40% - 1em) 15% 45%;
+    font-size: smaller;
+}
+
+.card.editar form p:nth-child(2) a {
+    overflow: clip;
+}
+
+.card.editar form p:nth-child(2) label:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.card.editar form p:nth-child(2) input:nth-child(3) {
+    justify-self: end;
+}
+
+html.dark-mode .card form button {
+    border: 2px solid var(--primaryColor);
+}
+
+html.dark-mode .card form button:hover, html.dark-mode .card form button:active {
+    background: var(--primaryColor);
+}
+
+@media only screen and (max-width: 700px) {
+    .card form p {
+        display: flex;
+        flex-direction: column;
+        place-items: start;
+        margin-bottom: 1em;
+    }
+}

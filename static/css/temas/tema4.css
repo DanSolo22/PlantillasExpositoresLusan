@@ -1,0 +1,10 @@
+:root {
+    --primaryColor: #cc533c;
+    --primaryLightColor: #ff8367;
+    --primaryLightColorOpacity: rgba(255, 131, 103, 0.3);
+    --primaryDarkColor: #af2817;
+    --secondaryColor: #009d8c;
+    --secondaryLightColor: #4dbaa7;
+    --secondaryLightColorOpacity: rgba(77, 186, 167, 0.4);
+    --secondaryDarkColor: #008d74;
+}

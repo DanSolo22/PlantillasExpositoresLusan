@@ -1,0 +1,450 @@
+.infinite-container .contenido {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.filtro {
+    margin: 1em 1em 0;
+}
+
+.filtro form {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: fit-content(85%) fit-content(30%);
+}
+
+.filtro form div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0 0 1em;
+    place-content: center;
+    place-items: center;
+}
+
+.filtro button, .results button {
+    border: 2px solid var(--secondaryColor);
+    background: var(--background);
+    padding: 0.25em 0.75em;
+    border-radius: 0.75em;
+    font-weight: 600;
+    color: var(--secondaryColor);
+    transition: all ease-in-out 0.1s;
+}
+
+.filtro button:hover, .results button:hover,
+.filtro button:active, .results button:active {
+    box-shadow: var(--shadowSH);
+    background: var(--secondaryColor);
+    color: var(--background);
+}
+
+.filtro form input + label {
+    border: 1px solid var(--textPrimaryColor);
+    transition: all ease-in-out 0.1s;
+}
+
+.filtro form .tag, .filtro form input + label {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    padding: 0.4em 0.8em;
+    border-radius: 2em;
+    gap: 0.5em;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filtro form .tag, .filtro form input:checked + label {
+    background: var(--secondaryLightColorOpacity);
+}
+
+.filtro form .tag .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.results {
+    color: var(--textSecondaryColor);
+    margin: 0 3em;
+    font-size: smaller;
+    font-weight: 400;
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+}
+
+.card.reseña {
+    padding: 0;
+    min-width: calc(100% - 4em);
+}
+
+.card.reseña .ficha {
+    padding: 1.5em 2em;
+    display: flex;
+    place-content: center;
+    place-items: start;
+    gap: 1em;
+}
+
+.card.reseña .ficha img {
+    width: 75px;
+    border-radius: 0.5em;
+}
+
+.card.reseña .ficha .texto {
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    width: 100%;
+}
+
+.card.reseña .ficha .texto .titulo {
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.card.reseña .ficha .texto .creador {
+    font-size: small;
+}
+
+.card.reseña .ficha .texto .sinopsis {
+    font-size: x-small;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card.reseña .comentario {
+    background: var(--secondaryLightColorOpacity);
+    display: flex;
+    padding: 1em 2em 0;
+    gap: 1em;
+}
+
+.card.comentarios {
+    margin-top: -1em;
+    width: 80%;
+    max-width: calc(100% - 4em);
+    align-self: end;
+    position: relative;
+    padding: 1em 2em;
+}
+
+.card.comentarios::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 100%;
+    background: var(--secondaryLightColorOpacity);
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card.comentarios .comentario:not(:first-child) {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid var(--textPrimaryColor);
+}
+
+.comentario {
+    display: flex;
+}
+
+.comentario {
+    flex-direction: row;
+    gap: 1em;
+}
+
+.comentario .foto-perfil {
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.comentario .material-symbols-rounded {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.comentario .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.comentario .texto .info {
+    width: 100%;
+    display: flex;
+    gap: 0.4em;
+    font-size: smaller;
+    place-items: center;
+}
+
+.comentario .texto .info .nombre {
+    font-weight: bolder;
+}
+
+.comentario .texto .info .time {
+    margin-left: auto;
+    text-align: right;
+    font-size: smaller;
+    color: var(--textSecondaryColor);
+}
+
+.comentario .texto .contenido
+.card.lista .comentario .texto .titulo,
+.card.lista .comentario .texto .descripcion {
+    width: 100%;
+}
+
+.card.comentarios .texto * {
+    font-size: smaller;
+}
+
+.card.comentarios .material-symbols-rounded {
+    font-size: 24px;
+}
+
+.card.reseña .buttons {
+    background: var(--secondaryLightColorOpacity);
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: start;
+    gap: 1em;
+    padding: 1em 2em;
+    border-radius: 0 0 1em 1em;
+}
+
+.card.reseña .buttons div {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 5%;
+}
+
+.card.reseña .buttons button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    gap: 0.25em;
+    place-items: center;
+}
+
+.card.reseña .buttons button:hover,
+.card.reseña .buttons button:active,
+.card.reseña .buttons button:hover span,
+.card.reseña .buttons button:active span {
+    color: var(--secondaryDarkColor);
+    transition: all ease-in-out 0.1s;
+}
+
+.card.reseña .buttons form {
+    display: flex;
+    flex-direction: column;
+    place-items: center start;
+    gap: 0.5em;
+}
+
+.card.reseña .buttons form label {
+    display: none;
+    visibility: hidden;
+}
+
+.card.reseña .buttons form textarea {
+    width: 100%;
+    resize: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--secondaryColor);
+    background: var(--background);
+}
+
+.card.reseña .buttons form button {
+    font-size: smaller;
+    padding: 0.5em 1em;
+    border: none;
+    color: var(--background);
+    border-radius: 2em;
+    background: var(--secondaryColor);
+}
+
+.card.reseña .buttons form button:hover,
+.card.reseña .buttons form button:active {
+    color: var(--background);
+    background: var(--secondaryDarkColor);
+}
+
+.card.fichatecnica {
+    min-width: calc(100% - 4em);
+}
+
+.card.fichatecnica .body {
+    display: flex;
+    place-content: center;
+    place-items: start;
+    gap: 1em;
+}
+
+.card.fichatecnica img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+.card.fichatecnica .texto {
+    width: 100%;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.card.fichatecnica .texto .titulo {
+    font-weight: 500;
+}
+
+.card.fichatecnica .texto .creador {
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.card.fichatecnica .texto .sinopsis {
+    font-size: small;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card.fichatecnica .footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.lista .buttons,
+.card.fichatecnica .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 1em;
+    padding: 1em 0 0;
+}
+
+.card.lista .buttons button,
+.card.fichatecnica .buttons button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    gap: 0.25em;
+    place-items: center;
+}
+
+.card.lista .buttons button:hover,
+.card.lista .buttons button:active,
+.card.lista .buttons button:hover span,
+.card.lista .buttons button:active span,
+.card.fichatecnica .buttons button:hover,
+.card.fichatecnica .buttons button:active,
+.card.fichatecnica .buttons button:hover span,
+.card.fichatecnica .buttons button:active span {
+    color: var(--secondaryDarkColor);
+    transition: all ease-in-out 0.1s;
+}
+
+.card.fichatecnica form {
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+}
+
+.card.fichatecnica form label {
+    visibility: hidden;
+}
+
+.card.fichatecnica form textarea {
+    width: 100%;
+    resize: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--secondaryColor);
+    background: var(--background);
+}
+
+.card.fichatecnica form button {
+    padding: 0.5em 1em;
+    border: none;
+    color: var(--background);
+    border-radius: 2em;
+    background: var(--secondaryColor);
+    margin: 1em auto 0;
+}
+
+.card.fichatecnica form button:hover,
+.card.fichatecnica form button:active {
+    background: var(--secondaryDarkColor);
+    transition: all ease-in-out 0.1s;;
+}
+
+html.dark-mode .card.reseña .buttons form button {
+    background: var(--secondaryLightColor);
+}
+
+html.dark-mode .card.reseña .buttons form button:hover,
+html.dark-mode .card.reseña .buttons form button:active {
+    background: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 820px) {
+    .card.fichatecnica, .card.reseña {
+        min-width: calc(100% - 2em);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .card.reseña .ficha img {
+        width: 60px;
+    }
+
+    .card.reseña .ficha {
+        padding: 1.5em;
+    }
+
+    .card.reseña .ficha .texto .sinopsis {
+        -webkit-line-clamp: 2;
+    }
+
+    .card.reseña .comentario {
+        padding: 1em 1.5em 0;
+    }
+
+    .card.reseña .buttons {
+        padding: 1em 1.5em;
+    }
+
+    .card.fichatecnica img {
+        width: 70px;
+        height: 100px;
+    }
+
+    .card.fichatecnica .texto .sinopsis {
+        -webkit-line-clamp: 3;
+    }
+}
